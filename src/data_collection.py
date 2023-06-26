@@ -1,17 +1,15 @@
 import velodyne_decoder as vd
 from tqdm import tqdm
 
-model='VLP-16'
-bagfile_loc = 'D:\EECE 5554\Project/2017-10-18-17-33-13_0.bag'
-topics = '/ns1/velodyne_packets'
 
-def get_cloud_arrays():
+def get_cloud_arrays(model, bagfile_loc, topics):
+  
+  assert isinstance(topics, list), 'topics must be a list'
   
   config = vd.Config(model=model) 
-  bagfile = bagfile_loc
   lidar_topics = topics # '/ns2/velodyne_packets'
   cloud_arrays = []
-  for stamp, points, topic in tqdm(vd.read_bag(bagfile, config, lidar_topics)):
+  for stamp, points, topic in tqdm(vd.read_bag(bagfile_loc, config, lidar_topics)):
     cloud_arrays.append(points)
   return cloud_arrays
 
