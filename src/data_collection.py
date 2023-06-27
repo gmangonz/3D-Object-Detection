@@ -4,6 +4,11 @@ from tqdm import tqdm
 
 def get_cloud_arrays(model, bagfile_loc, topics):
   
+  """
+  Returns the cloud arrays given the path to bag file and topics. Model will be a Velodyne LidAR model to get the configuration
+  
+  """
+
   assert isinstance(topics, list), 'topics must be a list'
   
   config = vd.Config(model=model) 
