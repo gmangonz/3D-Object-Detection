@@ -12,14 +12,13 @@ Additional requirements listed in requirements.yaml file. (TODO)
 
 ### Velodyne-decoder
 
-`` Bash
+``bash
 pip install rosbag --extra-index-url https://rospypi.github.io/simple/
 
 ``
 
 ## Data
-Link to the rosbag can be found in the link below:
-- https://northeastern-my.sharepoint.com/:f:/r/personal/singh_risha_northeastern_edu/Documents/LiDAR%20bicycle_Pedestrian%20data?csf=1&web=1&e=rjat17
+Link to the rosbag can be found [here](https://drive.google.com/file/d/1MiPApz0QMdPGunLu2G9QBLTkUDTqGvDt/view?usp=drive_link):
 
 Each packet contains the data from 24 firing sequences in 12 data blocks where each data block contains information from two firing sequences of 16 lasers.
 
