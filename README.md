@@ -10,17 +10,29 @@ Object detection is a key component in advanced driver assistance systems (ADAS)
 
 Additional requirements listed in requirements.yaml file. (TODO)
 
-### Velodyne-decoder
-
-``bash
-pip install rosbag --extra-index-url https://rospypi.github.io/simple/
-
-``
-
 ## Data
-Link to the rosbag can be found [here](https://drive.google.com/file/d/1MiPApz0QMdPGunLu2G9QBLTkUDTqGvDt/view?usp=drive_link):
+Link to the rosbag can be found [here](https://drive.google.com/file/d/1MiPApz0QMdPGunLu2G9QBLTkUDTqGvDt/view?usp=drive_link).
 
 Each packet contains the data from 24 firing sequences in 12 data blocks where each data block contains information from two firing sequences of 16 lasers.
+
+### Data Extraction - Velodyne Decoder ([reference](https://github.com/valgur/velodyne_decoder))
+
+```bash
+pip install rosbag --extra-index-url https://rospypi.github.io/simple/
+pip install velodyne-decoder
+
+```
+```Python
+import velodyne_decoder as vd
+
+bagfile = 'xyz.bag'
+lidar_topics = ['/velodyne_packets']
+cloud_arrays = []
+for stamp, points, topic in vd.read_bag(bagfile, topics=lidar_topics):
+    cloud_arrays.append(points)
+
+
+```
 
 # Methods
 
