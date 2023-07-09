@@ -1,5 +1,21 @@
 # LiDAR point-cloud based 3D object detection
-Object detection is a key component in advanced driver assistance systems (ADAS), which allow cars to detect driving lanes and pedestrians to improve road safety. I took this project to learn how to perform 3D Object Detection using LiDAR data. The data comes from a Velodyne VLP-16 LiDAR sensor to capture real-time scenarios. Using Open3d, I perform the following: segmentation, RANSAC, DBSCAN, Voxel-Grid Downsampling, clustering, and detection using bounding boxes.
+Object detection is a key component in advanced driver assistance systems (ADAS), which allow cars to detect driving lanes and pedestrians to improve road safety. I took this project to learn how to perform 3D Object Detection using LiDAR data. The data comes from a Velodyne VLP-16 LiDAR sensor to capture real-time scenarios. Using Open3D, I perform the following: segmentation, RANSAC, DBSCAN, Voxel-Grid Downsampling, clustering, and detection using bounding boxes.
+
+## Requirements
+1. python 3.7
+2. open3d
+2. rosbag
+3. velodyne-decoder
+4. bagpy
+
+Additional requirements listed in requirements.yaml file. (TODO)
+
+### Velodyne-decoder
+
+`` Bash
+pip install rosbag --extra-index-url https://rospypi.github.io/simple/
+
+``
 
 ## Data
 Link to the rosbag can be found in the link below:
