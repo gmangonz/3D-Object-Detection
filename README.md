@@ -88,10 +88,10 @@ Using the algorithms described I can detect objects accurately in real time. As 
 This was the first step in learning 3D object detection, and therefore I recognize various improvements and implementations.
 ## TODO
 
- [ ] Test Open3D-ml library
+- [ ] Test Open3D-ml library
 - [ ] Integrate Pytorch with algorithms such as Point Pillars and PointRCNN
- [ ] Test the ability to use YOLO to build a 3D object detector from scratch
- [ ] Fuse with camera data for 3D and 2D object detection
+- [ ] Test the ability to use YOLO to build a 3D object detector from scratch
+- [ ] Fuse with camera data for 3D and 2D object detection
 
 # References :
 1. Velodyne lidar puck. https://www.amtechs.co.jp/product/VLP-16-Puck.pdf.
