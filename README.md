@@ -85,9 +85,9 @@ Using the algorithms described I can detect objects accurately in real time. As 
 
 # Future Plans
 
-This was the first step in learning 3D object detection, and therefore I recognize various improvements and implementations.
-## TODO
+This was the first step in learning 3D object detection, and therefore I recognize various improvements and implementations listed below.
 
+## TODO
 - [ ] Test Open3D-ml library
 - [ ] Integrate Pytorch with algorithms such as Point Pillars and PointRCNN
 - [ ] Test the ability to use YOLO to build a 3D object detector from scratch
