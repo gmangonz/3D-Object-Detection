@@ -30,8 +30,6 @@ lidar_topics = ['/velodyne_packets']
 cloud_arrays = []
 for stamp, points, topic in vd.read_bag(bagfile, topics=lidar_topics):
     cloud_arrays.append(points)
-
-
 ```
 
 # Methods
@@ -48,9 +46,9 @@ The RANSAC algorithm can be described as follows:
 5. Store the plane points and points having the maximum number of inliers.
 6. Repeat the process again for MAX-ITERATIONS.
 
-<img src="images\RANSAC1.png" width=700px>
-<img src="images\RANSAC2.png" width=700px>
-<img src="images\RANSAC3.png" width=700px>
+<img src="images\RANSAC1.png" width=500px>
+<img src="images\RANSAC2.png" width=500px>
+<img src="images\RANSAC3.png" width=500px>
 After RANSAC is complete, the plane having the maximum number of inliers is the best estimate of the road plane. Using this algorithm, we can remove the road plane so that obstacles in the field of view of the sensor can be more efficiently localized and detected.
 
 ## 3. DBSCAN: Density-Based Spatial Clustering of Applications with Noise
@@ -83,6 +81,17 @@ Using the algorithms described I can detect objects accurately in real time. As 
    Results after clustering      |       Clusters with bounding boxes        |
 :-------------------------:|:------------------------:|
 | <img src="images\Clustering.jpg" width=500px> | <img src="images\Bounding Box.jpg" width=500px> |
+
+
+# Future Plans
+
+This was the first step in learning 3D object detection, and therefore I recognize various improvements and implementations.
+## TODO
+
+- [] Test Open3D-ml library
+- [] Integrate Pytorch with algorithms such as Point Pillars and PointRCNN
+- [] Test the ability to use YOLO to build a 3D object detector from scratch
+- [] Fuse with camera data for 3D and 2D object detection
 
 # References :
 1. Velodyne lidar puck. https://www.amtechs.co.jp/product/VLP-16-Puck.pdf.
